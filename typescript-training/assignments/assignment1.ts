@@ -37,8 +37,8 @@ console.log(`Person's occupation : ${occupation}`);
 let favouriteColour: string = "Blue";
 console.log(`Person's favourite colour : ${favouriteColour}`);
 
-//10.Current year: 2023
-let currentYear: number = 2023;
+//10.Current year: 2026
+let currentYear: number = 2026;
 console.log(`Current year : ${currentYear}`);
 
 
