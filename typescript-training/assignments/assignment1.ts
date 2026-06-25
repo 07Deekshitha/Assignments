@@ -20,10 +20,10 @@ let emailAddress: string = "john.doe@example.com";
 console.log(`Person's email address : ${emailAddress}`);
 
 //6. Coordinates of a location (latitude, longitude): 37.7749, -122.4194
-let latitude: number = 37.7749;
-let longitude: number = -122.4194;
+let location: number [] = [37.7749, -122.4194];
+
 //console.log(`Coordinates of a location (latitude, longitude): ${latitude}, ${longitude}`);
-console.log("Coordinates of a location (latitude, longitude):", latitude, longitude);
+console.log("Coordinates of a location (latitude, longitude):", location[0], location[1]);
 
 //7. Person's marital status: true or false
 let maritalStatus : boolean = false;
@@ -43,7 +43,7 @@ console.log(`Current year : ${currentYear}`);
 
 
 //11.Number of followers on a social media platform: 1,000,000
-let numberOfFollowers: number = 1000000;
+let numberOfFollowers: string = "1,000,000";
 console.log(`Number of followers on a social media platform : ${numberOfFollowers}`);       
 
 //12.Rating of a movie: 7.5
