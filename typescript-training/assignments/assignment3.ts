@@ -1,19 +1,36 @@
-// arrays concept
+// Create array to store student names
+const studentNames: string[] = ['Suresh', 'Mahesh', 'Naresh'];
 
-let name : string[] = ["Suresh", "Mahesh", "Naresh"];
-let Marks : number[] = [75,80,82];
+// Create array to store student marks
+const studentMarks: number[] = [75, 80, 82];
 
-//add 10marks to each student
- console.log("Updated Marks:");
-let newMarks : number[] = [];
-for (let i:number = 0; i<Marks.length; i++){
-    newMarks[i] = Marks[i] + 10;
-    console.log(`${name[i]}: ${newMarks[i]}`);
+// Variable to store total marks for average calculation
+let total: number = 0;
+
+// Create a new array to store updated marks
+const updatedMarks: number[] = [];
+
+// Print heading before displaying updated marks
+console.log("Updated Marks:");
+
+// Loop through studentMarks array using normal for loop
+for (let i = 0; i < studentMarks.length; i++) {
+
+    // Add 10 marks to each student without modifying original array
+    //if i goes outof range it will be undefined so we use ! to tell typescript that we are sure it is not undefined
+    updatedMarks[i] = studentMarks[i] + 10; // this is also correct but it throws error or warning in typescript so we use ! to tell typescript that we are sure it is not undefined
+    //updatedMarks[i] = studentMarks[i]! + 10;
+
+    // Add updated mark to total for average calculation
+    //total += updatedMarks[i]!;
+    total += updatedMarks[i];
+
+    // Print student name with updated mark
+    console.log(`${studentNames[i]}: ${updatedMarks[i]}`);
 }
-    //average of all marks of all students
-    let totalMarks : number = 0;
-    for (let j:number = 0; j<newMarks.length; j++){
-        totalMarks = totalMarks + newMarks[j];
-    }
-    let averageMarks : number = totalMarks / newMarks.length;
-    console.log(`Average marks: ${averageMarks}`);
+
+// Calculate average marks
+const average: number = total / updatedMarks.length;
+
+// Print average marks rounded to 1 decimal place
+console.log(`Average Marks: ${average}`);

@@ -26,9 +26,9 @@ let totalCredit: number = 0;
 let totalDebit: number = 0;
 let suspiciousCount: number = 0;   
 
-for (let i: number = 0; i < transactions.length; i++) 
+for (let amount of transactions) 
 {
-    let amount: number = transactions[i];
+    //let amount: number = transactions[i];
     //credit transaction
     //positive value refers credit transaction
     if (amount > 0) { 
