@@ -18,12 +18,12 @@ for (let i = 0; i < studentMarks.length; i++) {
 
     // Add 10 marks to each student without modifying original array
     //if i goes outof range it will be undefined so we use ! to tell typescript that we are sure it is not undefined
-    updatedMarks[i] = studentMarks[i] + 10; // this is also correct but it throws error or warning in typescript so we use ! to tell typescript that we are sure it is not undefined
-    //updatedMarks[i] = studentMarks[i]! + 10;
+    //updatedMarks[i] = studentMarks[i] + 10; // this is also correct but it throws error or warning in typescript so we use ! to tell typescript that we are sure it is not undefined
+    updatedMarks[i] = studentMarks[i]! + 10;
 
     // Add updated mark to total for average calculation
-    //total += updatedMarks[i]!;
-    total += updatedMarks[i];
+    total += updatedMarks[i]!;
+    //total += updatedMarks[i];
 
     // Print student name with updated mark
     console.log(`${studentNames[i]}: ${updatedMarks[i]}`);
